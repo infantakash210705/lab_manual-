@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Model Practical Materials</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg,#0a1633,#08142d,#1c1140);
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h1{
+      font-size:58px;
+      font-weight:700;
+      background: linear-gradient(to right,#7aa2ff,#d48cff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:15px;
+    }
+
+    .title p{
+      color:#b8bfd6;
+      font-size:22px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
+    }
+
+    .card{
+      position:relative;
+      padding:40px;
+      border-radius:28px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      transition:0.4s ease;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:'';
+      position:absolute;
+      width:200px;
+      height:200px;
+      background:rgba(138,92,246,0.2);
+      border-radius:50%;
+      top:-60px;
+      right:-60px;
+      filter:blur(30px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(140,120,255,0.5);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .icon{
+      font-size:60px;
+      margin-bottom:30px;
+    }
+
+    .card h2{
+      font-size:40px;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#aeb7d1;
+      font-size:20px;
+      margin-bottom:40px;
+    }
+
+    .pdf-btn{
+      text-decoration:none;
+      color:#67a8ff;
+      font-size:22px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      transition:0.3s;
+    }
+
+    .pdf-btn:hover{
+      color:#9fc4ff;
+    }
+
+    .arrow{
+      font-size:28px;
+    }
+
+    @media(max-width:768px){
+
+      .title h1{
+        font-size:38px;
+      }
+
+      .title p{
+        font-size:16px;
+      }
+
+      .card h2{
+        font-size:30px;
+      }
+
+      .card p{
+        font-size:16px;
+      }
+
+      .pdf-btn{
+        font-size:18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="title">
+      <h1>📘 Model Practical Materials</h1>
+      <p>Select a subject below to access the study materials.</p>
+    </div>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <div class="icon">🗂️</div>
+
+        <h2>Data Warehousing</h2>
+
+        <p>DW Lab Manual PDF</p>
+
+        <!-- Replace dw.pdf with your PDF file -->
+        <a href="pdfs/Data Warehousing Lab manual.pdf" target="_blank" class="pdf-btn">
+          Open PDF
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <div class="icon">💻</div>
+
+        <h2>OOSE LAB RECORD</h2>
+
+        <p>OOSE Lab Manual PDF</p>
+
+        <!-- Replace video.pdf with your PDF file -->
+        <a href="pdfs/22ML601-00SE LAB RECORD (1)_organized.pdf" target="_blank" class="pdf-btn">
+          Open PDF
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <div class="icon">🧺</div>
+
+        <h2>Digital Marketing</h2>
+
+        <p>DM Lab Manual PDF</p>
+
+        <a href="pdfs/22PCS49-Digital Marketing record to printout.pdf" target="_blank" class="pdf-btn">
+          Open PDF
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
